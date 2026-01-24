@@ -57,7 +57,7 @@ public class EmailGeneratorService {
         }
     }
 
-    // 🔒 STRICT PROMPT (NO EXTRA AI TALK)
+
     private String buildStrictPrompt(EmailRequest emailRequest) {
 
         String tone = (emailRequest.getTone() != null && !emailRequest.getTone().isBlank())
@@ -65,9 +65,9 @@ public class EmailGeneratorService {
                 : "neutral";
 
         return
-                "Rewrite the following email in a " + tone + " tone.\n" +
+                "write reply for the following email in a " + tone + " tone.\n" +
                         "IMPORTANT RULES:\n" +
-                        "1. Return ONLY the rewritten email content.\n" +
+                        "1. Return ONLY the reply email content.\n" +
                         "2. Do NOT add explanations, headings, or options.\n" +
                         "3. Do NOT say phrases like 'Here are some options'.\n" +
                         "4. Output must be plain email text only.\n\n" +
