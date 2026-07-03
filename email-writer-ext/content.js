@@ -1,3 +1,7 @@
+// Configurable Production Backend API URL
+// Replace "http://localhost:8080" with your actual hosted backend domain when deploying (e.g., https://email-writer-backend.onrender.com)
+const API_BASE_URL = "http://localhost:8080";
+
 console.log("Email Writer Extension -Content Script Loaded");
 // mutationObserver is api watches the changes that are occuring in the dom tree and whenever a change 
 // occur it will check wheather it matches the change that we need thenn it perform some operations that we are telling to do
@@ -68,7 +72,7 @@ function injectButton(){
             button.disabled=true;
 
             const emailContent=getEmailContent();
-            const response =await fetch('http://localhost:8080/api/email/generate',{
+            const response =await fetch(`${API_BASE_URL}/api/email/generate`,{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json',   
