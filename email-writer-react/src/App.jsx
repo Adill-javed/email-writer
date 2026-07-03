@@ -27,7 +27,7 @@ function App() {
     setLoading(true);
     setError('');
     try{
-      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "https://email-writer-b7b7.onrender.com";
       const response=await axios.post(`${apiBaseUrl}/api/email/generate`,{
         emailContent,
         tone

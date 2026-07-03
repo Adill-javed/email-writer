@@ -1,6 +1,6 @@
 // Configurable Production Backend API URL
 // Replace "http://localhost:8080" with your actual hosted backend domain when deploying (e.g., https://email-writer-backend.onrender.com)
-const API_BASE_URL = "http://localhost:8080";
+const API_BASE_URL = "https://email-writer-b7b7.onrender.com";
 
 console.log("Email Writer Extension -Content Script Loaded");
 // mutationObserver is api watches the changes that are occuring in the dom tree and whenever a change 
